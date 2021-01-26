@@ -1,7 +1,7 @@
 {
-  "name": "use-wallet",
+  "name": "@bdollar/use-wallet",
   "version": "0.8.1",
-  "author": "Aragon Association <legal@aragon.org>",
+  "author": "bDollar Dev <bdollar.d@protonmail.com>",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
