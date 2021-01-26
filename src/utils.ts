@@ -75,6 +75,10 @@ async function ethereumRequest(
     }).then(rpcResult)
   }
 
+  //@ts-ignore
+  if (window.ethereum.isTrust && ethereum.send) {
+    return ethereum.send({ method, params }).then(rpcResult)
+  }
   // If none of the previous two exist, we assume the provider is pre EIP-1193,
   // using .send() rather than .request().
   if (ethereum.send) {

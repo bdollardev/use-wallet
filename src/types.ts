@@ -34,6 +34,10 @@ type EthereumProviderSend = {
   send: (method: string, params: string[]) => Promise<unknown>
 }
 
+type TrustWeb3ProviderSend = {
+  send: (payload: { method: string, params: string[] }) => Promise<unknown>
+}
+
 type EthereumProviderSendAsync = {
   sendAsync: (
     params: {
@@ -50,7 +54,8 @@ type EthereumProviderSendAsync = {
 
 export type EthereumProvider = EthereumProviderEip1193 &
   EthereumProviderSend &
-  EthereumProviderSendAsync
+  EthereumProviderSendAsync &
+  TrustWeb3ProviderSend
 
 export type ConnectorInit = () => Promise<Connector>
 
